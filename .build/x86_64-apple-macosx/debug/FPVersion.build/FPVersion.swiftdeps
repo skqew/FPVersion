@@ -1,0 +1,20 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FPVersion"
+provides-nominal:
+- "9FPVersionAAV"
+provides-member:
+- ["9FPVersionAAV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "FPVersion"
+- "StringLiteralType"
+depends-member:
+- ["9FPVersionAAV", "init"]
+- ["9FPVersionAAV", "text"]
+depends-nominal:
+- "9FPVersionAAV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/module.modulemap"
+interface-hash: "ccaf0db51776dfa71a0a2c9674a17eed"

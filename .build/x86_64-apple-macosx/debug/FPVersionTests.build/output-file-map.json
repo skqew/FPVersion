@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/master.swiftdeps"
+  },
+  "/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/FPVersionTests.swift": {
+    "dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.d",
+    "object": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swift.o",
+    "swiftmodule": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swiftdeps"
+  },
+  "/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/XCTestManifests.swift": {
+    "dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.d",
+    "object": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swift.o",
+    "swiftmodule": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests~partial.swiftmodule",
+    "swift-dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swiftdeps"
+  }
+}

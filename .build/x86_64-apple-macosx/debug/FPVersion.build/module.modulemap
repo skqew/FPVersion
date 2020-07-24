@@ -1,0 +1,4 @@
+module FPVersion {
+    header "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion-Swift.h"
+    requires objc
+}

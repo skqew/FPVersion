@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "519a5f6e486ed6fb91616824d179b1a8"
+build_time: [1595573727, 898949000]
+inputs:
+  "/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/FPVersionTests.swift": [1595573715, 607330709]
+  "/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/XCTestManifests.swift": [1595573715, 607761699]

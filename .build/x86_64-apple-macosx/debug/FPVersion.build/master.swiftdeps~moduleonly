@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "bc650729efc91dc174df91f966ca172a"
+build_time: [1595573724, 406212000]
+inputs:
+  "/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/FPVersion.swift": [1595573715, 606501855]

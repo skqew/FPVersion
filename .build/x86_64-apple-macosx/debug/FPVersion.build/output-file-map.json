@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/master.swiftdeps"
+  },
+  "/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/FPVersion.swift": {
+    "dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.d",
+    "object": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swift.o",
+    "swiftmodule": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion~partial.swiftmodule",
+    "swift-dependencies": "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swiftdeps"
+  }
+}

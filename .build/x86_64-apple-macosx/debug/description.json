@@ -1,0 +1,25 @@
+{
+  "allExecutables" : [
+
+  ],
+  "builtTestProducts" : [
+    {
+      "packageName" : "FPVersion",
+      "productName" : "FPVersionPackageTests",
+      "testBinary" : "\/Users\/park-eunji\/Desktop\/Project\/FPVersion\/.build\/x86_64-apple-macosx\/debug\/FPVersionPackageTests.xctest\/Contents\/MacOS\/FPVersionPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "rootExecutables" : [
+
+  ],
+  "swiftTargetMap" : {
+    "C.FPVersion-debug.module" : "FPVersion",
+    "C.FPVersionTests-debug.module" : "FPVersionTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

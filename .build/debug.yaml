@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "FPVersion-debug.module": ["<FPVersion-debug.module>"]
+  "FPVersionPackageTests-debug.test": ["<FPVersionPackageTests-debug.test>"]
+  "FPVersionTests-debug.module": ["<FPVersionTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<FPVersion-debug.module>"]
+  "test": ["<FPVersion-debug.module>","<FPVersionPackageTests-debug.test>","<FPVersionTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/":
+    is-directory-structure: true
+  "/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/":
+    is-directory-structure: true
+commands:
+  "<FPVersion-debug.module>":
+    tool: phony
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.swiftmodule"]
+    outputs: ["<FPVersion-debug.module>"]
+
+  "<FPVersionPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionPackageTests.xctest/Contents/MacOS/FPVersionPackageTests"]
+    outputs: ["<FPVersionPackageTests-debug.test>"]
+
+  "<FPVersionTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.swiftmodule"]
+    outputs: ["<FPVersionTests-debug.module>"]
+
+  "C.FPVersion-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/FPVersion.swift"]
+    outputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "FPVersion"
+    module-output-path: "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.swiftmodule"
+    import-paths: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build"
+    objects: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion-Swift.h","-color-diagnostics"]
+    sources: ["/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/FPVersion.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.FPVersionPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.build/FPVersion.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swift.o"]
+    outputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionPackageTests.xctest/Contents/MacOS/FPVersionPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/FPVersionPackageTests.xctest/Contents/MacOS/FPVersionPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug","-o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionPackageTests.xctest/Contents/MacOS/FPVersionPackageTests","-module-name","FPVersionPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.10","-Xlinker","-add_ast_path","-Xlinker","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.FPVersionTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/FPVersionTests.swift","/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/XCTestManifests.swift","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersion.swiftmodule"]
+    outputs: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "FPVersionTests"
+    module-output-path: "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.swiftmodule"
+    import-paths: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build"
+    objects: ["/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/FPVersionTests.swift.o","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/FPVersionTests.build/XCTestManifests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/park-eunji/Desktop/Project/FPVersion/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/FPVersionTests.swift","/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/XCTestManifests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/park-eunji/Desktop/Project/FPVersion/Sources/FPVersion/","/Users/park-eunji/Desktop/Project/FPVersion/Tests/FPVersionTests/","/Users/park-eunji/Desktop/Project/FPVersion/Package.swift","/Users/park-eunji/Desktop/Project/FPVersion/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
