@@ -127,6 +127,7 @@ public class DeviceModel {
         }
     }
     
+    
     public static func systemVersion() -> String{
         
         var systemVersion = UIDevice.current.systemVersion
@@ -134,26 +135,39 @@ public class DeviceModel {
         return systemVersion
     }
     
-    public static func SYSTEM_VERSION_EQUAL_TO(version: String) -> Bool {
+    public static func systemVersionEqualTo(version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedSame
     }
 
-    public static func SYSTEM_VERSION_GREATER_THAN(version: String) -> Bool {
+    public static func systemVersionGreaterThan(version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedDescending
     }
 
-    public static func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: String) -> Bool {
+    public static func systemVersionGreaterThanOrEqualTo(version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedAscending
     }
 
-    public static func SYSTEM_VERSION_LESS_THAN(version: String) -> Bool {
+    public static func systemVersionLessThan(version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedAscending
     }
 
-    public static func SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(version: String) -> Bool {
+    public static func systemVersionLessThanOrEqualTo(version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending
     }
     
+    public static appShortVersion() -> String{
+        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        
+        return appVersion
+    }
+    
+    public static appVersion() -> String{
+        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        
+        return appVersion
+    }
     
     
 }
