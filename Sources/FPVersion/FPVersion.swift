@@ -4,7 +4,7 @@ import UIKit
 
 public class DeviceModel {
     
-    public static func getDeviceIdentifier() -> String {
+    public static func deviceIdentifier() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -24,10 +24,10 @@ public class DeviceModel {
             switch model {
             case "iPhone":
                 return self.iPhoneModel()
-            case "iPad":
-                return self.iPadModel()
-            case "iPad mini" :
-                return self.iPadMiniModel()
+//            case "iPad":
+//                return self.iPadModel()
+//            case "iPad mini" :
+//                return self.iPadMiniModel()
             default:
                 return "Unknown Model : \(model)"
             }
@@ -36,8 +36,8 @@ public class DeviceModel {
         /**
          iPhone 모델 이름 (iPhone6, iPhone7 Plus...)
          */
-        public static func iPhoneModel() -> String {
-            let identifier = self.getDeviceIdentifier()
+        static func iPhoneModel() -> String {
+            let identifier = self.deviceIdentifier()
             switch identifier {
             case "iPhone1,1" :
                 return "iPhone"
@@ -93,6 +93,47 @@ public class DeviceModel {
                 return "Simulator"
             case "x86_64" :
                 return "Simulator"
+                
+                
+                case "iPad1,1":
+                    return "iPad"
+                case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4" :
+                    return "iPad2"
+                case "iPad3,1", "iPad3,2", "iPad3,3" :
+                    return "iPad 3rd Generation"
+                case "iPad3,4", "iPad3,5", "iPad3,6" :
+                    return "iPad 4rd Generation"
+                case "iPad4,1", "iPad4,2", "iPad4,3" :
+                    return "iPad Air"
+                case "iPad5,3", "iPad5,4" :
+                    return "iPad Air2"
+                case "iPad6,7", "iPad6,8" :
+                    return "iPad Pro 12.9 Inch"
+                case "iPad6,3", "iPad6,4" :
+                    return "iPad Pro 9.7 Inch"
+                case "iPad6,11", "iPad6,12" :
+                    return "iPad 5th Generation"
+                case "iPad7,1", "iPad7,2" :
+                    return "iPad Pro 12.9 Inch 2nd Generation"
+                case "iPad7,3", "iPad7,4" :
+                    return "iPad Pro 10.5 Inch"
+                case "iPad7,5", "iPad7,6" :
+                    return "iPad 6th Generation"
+                case "iPad7,1", "iPad7,12" :
+                    return "iPad 7th Generation"
+                case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4" :
+                    return "iPad Pro 11 Inch"
+                
+                case "iPad2,5", "iPad2,6", "iPad2,7" :
+                    return "iPad mini"
+                case "iPad4,4", "iPad4,5", "iPad4,6" :
+                    return "iPad mini2"
+                case "iPad4,7", "iPad4,8", "iPad4,9" :
+                    return "iPad mini3"
+                case "iPad5,1", "iPad5,2" :
+                    return "iPad mini4"
+                
+                
             default:
                 return "Unknown iPhone : \(identifier)"
             }
@@ -101,60 +142,60 @@ public class DeviceModel {
         /**
          iPad 모델 이름
          */
-        public static func iPadModel() -> String {
-            let identifier = self.getDeviceIdentifier()
-            switch identifier {
-            case "iPad1,1":
-                return "iPad"
-            case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4" :
-                return "iPad2"
-            case "iPad3,1", "iPad3,2", "iPad3,3" :
-                return "iPad 3rd Generation"
-            case "iPad3,4", "iPad3,5", "iPad3,6" :
-                return "iPad 4rd Generation"
-            case "iPad4,1", "iPad4,2", "iPad4,3" :
-                return "iPad Air"
-            case "iPad5,3", "iPad5,4" :
-                return "iPad Air2"
-            case "iPad6,7", "iPad6,8" :
-                return "iPad Pro 12.9 Inch"
-            case "iPad6,3", "iPad6,4" :
-                return "iPad Pro 9.7 Inch"
-            case "iPad6,11", "iPad6,12" :
-                return "iPad 5th Generation"
-            case "iPad7,1", "iPad7,2" :
-                return "iPad Pro 12.9 Inch 2nd Generation"
-            case "iPad7,3", "iPad7,4" :
-                return "iPad Pro 10.5 Inch"
-            case "iPad7,5", "iPad7,6" :
-                return "iPad 6th Generation"
-            case "iPad7,1", "iPad7,12" :
-                return "iPad 7th Generation"
-            case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4" :
-                return "iPad Pro 11 Inch"
-            default:
-                return "Unknown iPad : \(identifier)"
-            }
-        }
+//        public static func iPadModel() -> String {
+//            let identifier = self.getDeviceIdentifier()
+//            switch identifier {
+//            case "iPad1,1":
+//                return "iPad"
+//            case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4" :
+//                return "iPad2"
+//            case "iPad3,1", "iPad3,2", "iPad3,3" :
+//                return "iPad 3rd Generation"
+//            case "iPad3,4", "iPad3,5", "iPad3,6" :
+//                return "iPad 4rd Generation"
+//            case "iPad4,1", "iPad4,2", "iPad4,3" :
+//                return "iPad Air"
+//            case "iPad5,3", "iPad5,4" :
+//                return "iPad Air2"
+//            case "iPad6,7", "iPad6,8" :
+//                return "iPad Pro 12.9 Inch"
+//            case "iPad6,3", "iPad6,4" :
+//                return "iPad Pro 9.7 Inch"
+//            case "iPad6,11", "iPad6,12" :
+//                return "iPad 5th Generation"
+//            case "iPad7,1", "iPad7,2" :
+//                return "iPad Pro 12.9 Inch 2nd Generation"
+//            case "iPad7,3", "iPad7,4" :
+//                return "iPad Pro 10.5 Inch"
+//            case "iPad7,5", "iPad7,6" :
+//                return "iPad 6th Generation"
+//            case "iPad7,1", "iPad7,12" :
+//                return "iPad 7th Generation"
+//            case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4" :
+//                return "iPad Pro 11 Inch"
+//            default:
+//                return "Unknown iPad : \(identifier)"
+//            }
+//        }
         
         /**
          iPad mini 모델 이름
          */
-        public static func iPadMiniModel() -> String {
-            let identifier = self.getDeviceIdentifier()
-            switch identifier {
-            case "iPad2,5", "iPad2,6", "iPad2,7" :
-                return "iPad mini"
-            case "iPad4,4", "iPad4,5", "iPad4,6" :
-                return "iPad mini2"
-            case "iPad4,7", "iPad4,8", "iPad4,9" :
-                return "iPad mini3"
-            case "iPad5,1", "iPad5,2" :
-                return "iPad mini4"
-            default:
-                return "Unknown iPad mini : \(identifier)"
-            }
-        }
+//        public static func iPadMiniModel() -> String {
+//            let identifier = self.getDeviceIdentifier()
+//            switch identifier {
+//            case "iPad2,5", "iPad2,6", "iPad2,7" :
+//                return "iPad mini"
+//            case "iPad4,4", "iPad4,5", "iPad4,6" :
+//                return "iPad mini2"
+//            case "iPad4,7", "iPad4,8", "iPad4,9" :
+//                return "iPad mini3"
+//            case "iPad5,1", "iPad5,2" :
+//                return "iPad mini4"
+//            default:
+//                return "Unknown iPad mini : \(identifier)"
+//            }
+//        }
 
 
     
