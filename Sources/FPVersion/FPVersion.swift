@@ -176,27 +176,24 @@ public class FPiOSVersion {
     
     //MARK:- 해상도
     
-    public static func resolutionSize() -> CGFloat{
+    public static func resolutionSize() -> String{
         
-        let screenSize = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
+        let screenHeight = UIScreen.main.bounds.height
                 
-//        switch screenHeight {
-//        case 480:
-//            return "Screen3Dot5inch"
-//        case 568:
-//            return "Screen4inch"
-//        case 667:
-//            return "Screen4Dot7inch"
-//        case 736:
-//            return "Screen5Dot5inch"
-//        case 812:
-//            return "Screen5Dot8inch"
-//        default:
-//            return "UnknownSize"
-//        }
-        return screenHeight
+        switch screenHeight {
+        case 480:
+            return "Screen3Dot5inch"
+        case 568:
+            return "Screen4inch"
+        case 667:
+            return "Screen4Dot7inch"
+        case 736:
+            return "Screen5Dot5inch"
+        case 812:
+            return "Screen5Dot8inch"
+        default:
+            return "UnknownSize"
+        }
     }
 
     
