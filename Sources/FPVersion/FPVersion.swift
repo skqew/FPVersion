@@ -4,7 +4,7 @@ import UIKit
 
 class DeviceModel {
     
-    func getDeviceIdentifier() -> String {
+    static func getDeviceIdentifier() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -15,11 +15,11 @@ class DeviceModel {
         
         return identifier
     
-
+    }
         /**
          디바이스 모델 (iPhone, iPad) 이름 전달 (iPhone6, iPhone7 Plus...)
          */
-        func deviceModelName() -> String {
+        static func deviceModelName() -> String {
             let model = UIDevice.current.model
             switch model {
             case "iPhone":
@@ -36,7 +36,7 @@ class DeviceModel {
         /**
          iPhone 모델 이름 (iPhone6, iPhone7 Plus...)
          */
-        public func iPhoneModel() -> String {
+        static public func iPhoneModel() -> String {
             let identifier = self.getDeviceIdentifier()
             switch identifier {
             case "iPhone1,1" :
@@ -157,4 +157,5 @@ class DeviceModel {
         }
 
 
+    
 }
