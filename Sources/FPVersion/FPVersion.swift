@@ -156,14 +156,14 @@ public class DeviceModel {
     }
     
     
-    public static func appVersion() -> String{
+    public static func appBuildVersion() -> String{
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
         
         return appVersion
     }
     
-    public static func appBuildVersion() -> String{
+    public static func appVersion() -> String{
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
         
