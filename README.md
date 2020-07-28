@@ -13,11 +13,11 @@ FPiOSVersion.deviceModelName()
 // 디바이스 버전
 FPiOSVersion.systemVersion()
 
-FPiOSVersion.systemVersionEqualTo("")
-FPiOSVersion.systemVersionGreaterThan("")
-FPiOSVersion.systemVersionGreaterThanOrEqualTo("")
-FPiOSVersion.systemVersionLessThan("")
-FPiOSVersion.systemVersionLessThanOrEqualTo("")
+FPiOSVersion.systemVersionEqualTo(to: String!)
+FPiOSVersion.systemVersionGreaterThan(to: String!)
+FPiOSVersion.systemVersionGreaterThanOrEqualTo(to: String!)
+FPiOSVersion.systemVersionLessThan(to: String!)
+FPiOSVersion.systemVersionLessThanOrEqualTo(to: String!)
 
 
 // 앱 버전
