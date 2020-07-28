@@ -155,16 +155,16 @@ public class DeviceModel {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending
     }
     
-    public static appShortVersion() -> String{
+    public static func appShortVersion() -> String{
         
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
         
         return appVersion
     }
     
-    public static appVersion() -> String{
+    public static func appVersion() -> String{
         
-        let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
         
         return appVersion
     }
