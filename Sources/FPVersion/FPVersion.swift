@@ -19,24 +19,24 @@ public class DeviceModel {
         /**
          디바이스 모델 (iPhone, iPad) 이름 전달 (iPhone6, iPhone7 Plus...)
          */
-        public static func deviceModelName() -> String {
-            let model = UIDevice.current.model
-            switch model {
-            case "iPhone":
-                return self.iPhoneModel()
-//            case "iPad":
-//                return self.iPadModel()
-//            case "iPad mini" :
-//                return self.iPadMiniModel()
-            default:
-                return "Unknown Model : \(model)"
-            }
-        }
+//        public static func deviceModelName() -> String {
+//            let model = UIDevice.current.model
+//            switch model {
+//            case "iPhone":
+//                return self.iPhoneModel()
+////            case "iPad":
+////                return self.iPadModel()
+////            case "iPad mini" :
+////                return self.iPadMiniModel()
+//            default:
+//                return "Unknown Model : \(model)"
+//            }
+//        }
         
         /**
          iPhone 모델 이름 (iPhone6, iPhone7 Plus...)
          */
-        static func iPhoneModel() -> String {
+        public static func deviceModelName() -> String {
             let identifier = self.deviceIdentifier()
             switch identifier {
             case "iPhone1,1" :
@@ -135,7 +135,7 @@ public class DeviceModel {
                 
                 
             default:
-                return "Unknown iPhone : \(identifier)"
+                return "Unknown Model : \(identifier)"
             }
         }
         
