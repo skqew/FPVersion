@@ -155,12 +155,6 @@ public class DeviceModel {
         return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending
     }
     
-    public static func appShortVersion() -> String{
-        
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-        
-        return appVersion
-    }
     
     public static func appVersion() -> String{
         
@@ -168,6 +162,15 @@ public class DeviceModel {
         
         return appVersion
     }
+    
+    public static func appBuildVersion() -> String{
+        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        
+        return appVersion
+    }
+    
+
     
     
 }
