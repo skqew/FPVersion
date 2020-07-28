@@ -29,7 +29,9 @@ FPiOSVersion.resolutionSize()
 
 ```
 
+
 ### Targetable models
+```
 iPhone4
 iPhone4S
 iPhone5
@@ -80,3 +82,4 @@ iPodTouch3Gen
 iPodTouch4Gen
 iPodTouch5Gen
 iPodTouch6Gen
+```
