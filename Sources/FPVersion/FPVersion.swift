@@ -2,9 +2,9 @@
 import UIKit
 
 
-class DeviceModel {
+public class DeviceModel {
     
-    func getDeviceIdentifier() -> String {
+    public static func getDeviceIdentifier() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -19,7 +19,7 @@ class DeviceModel {
         /**
          디바이스 모델 (iPhone, iPad) 이름 전달 (iPhone6, iPhone7 Plus...)
          */
-        func deviceModelName() -> String {
+        public static func deviceModelName() -> String {
             let model = UIDevice.current.model
             switch model {
             case "iPhone":
@@ -36,7 +36,7 @@ class DeviceModel {
         /**
          iPhone 모델 이름 (iPhone6, iPhone7 Plus...)
          */
-        func iPhoneModel() -> String {
+        public static func iPhoneModel() -> String {
             let identifier = self.getDeviceIdentifier()
             switch identifier {
             case "iPhone1,1" :
@@ -77,7 +77,7 @@ class DeviceModel {
                 return "iPhoneX"
             case "iPhone11,8" :
                 return "iPhoneXR"
-            case "iPhone12,3" :
+            case "iPhone11,2" :
                 return "iPhoneXS"
             case "iPhone11,4", "iPhone11,6" :
                 return "iPhoneXRMax"
@@ -101,7 +101,7 @@ class DeviceModel {
         /**
          iPad 모델 이름
          */
-        func iPadModel() -> String {
+        public static func iPadModel() -> String {
             let identifier = self.getDeviceIdentifier()
             switch identifier {
             case "iPad1,1":
@@ -140,7 +140,7 @@ class DeviceModel {
         /**
          iPad mini 모델 이름
          */
-        func iPadMiniModel() -> String {
+        public static func iPadMiniModel() -> String {
             let identifier = self.getDeviceIdentifier()
             switch identifier {
             case "iPad2,5", "iPad2,6", "iPad2,7" :
