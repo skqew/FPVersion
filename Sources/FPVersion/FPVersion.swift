@@ -180,7 +180,7 @@ public class FPiOSVersion {
         
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
+        let screenHeight = Int(screenSize.height)
                 
         switch screenHeight {
         case 480:
