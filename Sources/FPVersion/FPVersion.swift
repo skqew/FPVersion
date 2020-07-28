@@ -1,10 +1,10 @@
 
 import UIKit
 
-public class FPiOSVersion {
+
+public class FPiOSVersion {    
     
-    
-    //MARK:- 디바이스 Identifier (iPhone1,1, iPad1,1...)
+    //MARK:- 디바이스 Identifier (iPhone7,1, iPad3,2...)
     
     public static func deviceIdentifier() -> String {
         var systemInfo = utsname()
@@ -22,7 +22,9 @@ public class FPiOSVersion {
     //MARK:- 디바이스 모델 이름 (iPhone6, iPhone7 Plus...)
     
     public static func deviceModelName() -> String {
+        
         let identifier = self.deviceIdentifier()
+        
         switch identifier {
             
         // iPhone
@@ -87,9 +89,9 @@ public class FPiOSVersion {
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4" :
             return "iPad2"
         case "iPad3,1", "iPad3,2", "iPad3,3" :
-            return "iPad 3rd Generation"
+            return "iPad 3"
         case "iPad3,4", "iPad3,5", "iPad3,6" :
-            return "iPad 4rd Generation"
+            return "iPad 4"
         case "iPad4,1", "iPad4,2", "iPad4,3" :
             return "iPad Air"
         case "iPad5,3", "iPad5,4" :
@@ -99,15 +101,15 @@ public class FPiOSVersion {
         case "iPad6,3", "iPad6,4" :
             return "iPad Pro 9.7 Inch"
         case "iPad6,11", "iPad6,12" :
-            return "iPad 5th Generation"
+            return "iPad 5"
         case "iPad7,1", "iPad7,2" :
             return "iPad Pro 12.9 Inch 2nd Generation"
         case "iPad7,3", "iPad7,4" :
             return "iPad Pro 10.5 Inch"
         case "iPad7,5", "iPad7,6" :
-            return "iPad 6th Generation"
+            return "iPad 6"
         case "iPad7,11", "iPad7,12" :
-            return "iPad 7th Generation"
+            return "iPad 7"
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4" :
             return "iPad Pro 11 Inch"
             
@@ -120,6 +122,20 @@ public class FPiOSVersion {
             return "iPad mini3"
         case "iPad5,1", "iPad5,2" :
             return "iPad mini4"
+            
+        // iPod
+        case "iPod1,1" :
+            return "iPodTouch1Gen"
+        case "iPod2,1" :
+            return "iPodTouch2Gen"
+        case "iPod3,1" :
+            return "iPodTouch3Gen"
+        case "iPod4,1" :
+            return "iPodTouch4Gen"
+        case "iPod5,1" :
+            return "iPodTouch5Gen"
+        case "iPod7,1" :
+            return "iPodTouch6Gen"
             
         default:
             return "Unknown Model : \(identifier)"
@@ -195,7 +211,5 @@ public class FPiOSVersion {
             return "UnknownSize"
         }
     }
-
-    
     
 }
