@@ -1,12 +1,11 @@
 
 import UIKit
 
-
-public class DeviceModel {
+public class FPiOSVersion {
     
-    /**
-     디바이스 Identifier (iPhone1,1, iPad1,1...)
-     */
+    
+    //MARK:- 디바이스 Identifier (iPhone1,1, iPad1,1...)
+    
     public static func deviceIdentifier() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -17,16 +16,16 @@ public class DeviceModel {
         }
         
         return identifier
-        
     }
     
     
-    /**
-     디바이스 모델 이름 (iPhone6, iPhone7 Plus...)
-     */
+    //MARK:- 디바이스 모델 이름 (iPhone6, iPhone7 Plus...)
+    
     public static func deviceModelName() -> String {
         let identifier = self.deviceIdentifier()
         switch identifier {
+            
+        // iPhone
         case "iPhone1,1" :
             return "iPhone"
         case "iPhone1,2" :
@@ -82,7 +81,7 @@ public class DeviceModel {
         case "x86_64" :
             return "Simulator"
             
-            
+        // iPad
         case "iPad1,1":
             return "iPad"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4" :
@@ -107,11 +106,12 @@ public class DeviceModel {
             return "iPad Pro 10.5 Inch"
         case "iPad7,5", "iPad7,6" :
             return "iPad 6th Generation"
-        case "iPad7,1", "iPad7,12" :
+        case "iPad7,11", "iPad7,12" :
             return "iPad 7th Generation"
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4" :
             return "iPad Pro 11 Inch"
             
+        // iPad Mini
         case "iPad2,5", "iPad2,6", "iPad2,7" :
             return "iPad mini"
         case "iPad4,4", "iPad4,5", "iPad4,6" :
@@ -121,16 +121,17 @@ public class DeviceModel {
         case "iPad5,1", "iPad5,2" :
             return "iPad mini4"
             
-            
         default:
             return "Unknown Model : \(identifier)"
         }
     }
     
     
+    //MARK:- 디바이스 버전
+    
     public static func systemVersion() -> String{
         
-        var systemVersion = UIDevice.current.systemVersion
+        let systemVersion = UIDevice.current.systemVersion
         
         return systemVersion
     }
@@ -156,6 +157,8 @@ public class DeviceModel {
     }
     
     
+    //MARK:- 앱 버전
+    
     public static func appBuildVersion() -> String{
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
@@ -170,6 +173,31 @@ public class DeviceModel {
         return appVersion
     }
     
+    
+    //MARK:- 해상도
+    
+    public static func resolutionSize() -> String{
+        
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+                
+        switch screenHeight {
+        case 480:
+            return "Screen3Dot5inch"
+        case 568:
+            return "Screen4inch"
+        case 667:
+            return "Screen4Dot7inch"
+        case 736:
+            return "Screen5Dot5inch"
+        case 812:
+            return "Screen5Dot8inch"
+        default:
+            return "UnknownSize"
+        }
+        
+    }
 
     
     
