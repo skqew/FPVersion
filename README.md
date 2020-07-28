@@ -1,8 +1,16 @@
 # FPVersion
 
+## Add to your project
+```
+1. File -> Swift Packages -> Add Package Dependency…
+2. Enter ""
+import SDVersion
+```
+
 ## How it works
 
-```Swift
+```
+Swift
 
 // 디바이스 Identifier (iPhone7,1, iPad3,2...)
 FPiOSVersion.deviceIdentifier()
@@ -19,7 +27,6 @@ FPiOSVersion.systemVersionGreaterThanOrEqualTo(to: String!)
 FPiOSVersion.systemVersionLessThan(to: String!)
 FPiOSVersion.systemVersionLessThanOrEqualTo(to: String!)
 
-
 // 앱 버전
 FPiOSVersion.appBuildVersion()
 FPiOSVersion.appVersion()
@@ -30,7 +37,7 @@ FPiOSVersion.resolutionSize()
 ```
 
 
-### Targetable models
+## Targetable models
 ```
 iPhone4
 iPhone4S
@@ -74,7 +81,6 @@ iPadPro10Dot5Inch
 iPad6
 iPad7
 iPadPro11Inch
-
 
 iPodTouch1Gen
 iPodTouch2Gen
